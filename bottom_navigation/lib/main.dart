@@ -17,7 +17,7 @@ class MyAppState extends State<MyApp>{
   final _pageOptions = [
     HomePage(),
     WorkPage(),
-    LandscapePage()
+    LandscapePage() 
   ];
 
 
