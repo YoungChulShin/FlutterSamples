@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_pro/carousel_pro.dart';
 
 void main() {
   runApp(
@@ -17,8 +18,32 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+
+    Widget image_carousel = Container(
+      height: 200.0,
+      child: Carousel(
+        boxFit: BoxFit.cover,
+        images: [
+          AssetImage('images/c1.jpg'),
+          AssetImage('images/m1.jpeg'),
+          AssetImage('images/m2.jpg'),
+          AssetImage('images/w1.jpeg'),
+          AssetImage('images/w3.jpeg'),
+          AssetImage('images/w4.jpeg')
+        ],
+        autoplay: false,
+        animationCurve: Curves.fastOutSlowIn,
+        animationDuration: Duration(microseconds: 1000),
+        dotSize: 4.0, // 인디케이터 크기
+        dotColor: Colors.red,
+        indicatorBgPadding: 3.0,  // 인디케이터 높이
+      ),
+    );
+
+
     return Scaffold(
       appBar: AppBar(
+        elevation: 0.0,
         backgroundColor: Colors.red,
         title: Text('Fashapp'),
         actions: <Widget>[
@@ -96,7 +121,7 @@ class _HomePageState extends State<HomePage> {
               },
               child: ListTile(
                 title: Text('Settings'),
-                leading: Icon(Icons.settings),
+                leading: Icon(Icons.settings, color:Colors.blue),
               ),
             ),
             InkWell(
@@ -105,11 +130,16 @@ class _HomePageState extends State<HomePage> {
               },
               child: ListTile(
                 title: Text('About'),
-                leading: Icon(Icons.help),
+                leading: Icon(Icons.help, color: Colors.green),
               ),
             ),
           ],
         ),
+      ),
+      body: ListView(
+        children: <Widget>[
+          image_carousel
+        ],
       ),
     );
   }
