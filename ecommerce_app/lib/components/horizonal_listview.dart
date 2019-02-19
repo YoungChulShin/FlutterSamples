@@ -9,28 +9,28 @@ class HorizontalList extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         children: <Widget>[
           Category(
-            image_location: 'images/cats/tshirt.png',
-            image_caption: 'Shirt',
+            imageLocation: 'images/cats/tshirt.png',
+            imageCaption: 'Shirt',
           ),
           Category(
-            image_location: 'images/cats/dress.png',
-            image_caption: 'Dress',
+            imageLocation: 'images/cats/dress.png',
+            imageCaption: 'Dress',
           ),
           Category(
-            image_location: 'images/cats/jeans.png',
-            image_caption: 'Jean',
+            imageLocation: 'images/cats/jeans.png',
+            imageCaption: 'Jean',
           ),
           Category(
-            image_location: 'images/cats/formal.png',
-            image_caption: 'Formal',
+            imageLocation: 'images/cats/formal.png',
+            imageCaption: 'Formal',
           ),
           Category(
-            image_location: 'images/cats/informal.png',
-            image_caption: 'Informal', 
+            imageLocation: 'images/cats/informal.png',
+            imageCaption: 'Informal', 
           ),
           Category(
-            image_location: 'images/cats/accessories.png',
-            image_caption: 'Accessories',
+            imageLocation: 'images/cats/accessories.png',
+            imageCaption: 'Accessories',
           ),
 
         ],
@@ -41,12 +41,12 @@ class HorizontalList extends StatelessWidget {
 
 
 class Category extends StatelessWidget {
-  final String image_location;
-  final String image_caption;
+  final String imageLocation;
+  final String imageCaption;
 
   Category({
-    this.image_location,
-    this.image_caption
+    this.imageLocation,
+    this.imageCaption
   });
 
   @override
@@ -59,10 +59,10 @@ class Category extends StatelessWidget {
           width: 100.0,
             child: ListTile(
             title: Image.asset(
-              image_location,
+              imageLocation,
               width: 100.0,
               height: 80.0,),
-            subtitle: Text(image_caption, textAlign: TextAlign.center),
+            subtitle: Text(imageCaption, textAlign: TextAlign.center),
           ),
         ),
       ),
