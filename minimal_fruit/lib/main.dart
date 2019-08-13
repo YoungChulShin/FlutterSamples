@@ -121,7 +121,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
           height: 60.0,
           width: MediaQuery.of(context).size.width,
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Container(
                 padding: EdgeInsets.only(bottom: 5.0),
@@ -158,7 +158,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
                 height: 45.0,
                 width: 65.0,
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Text(
                       '12',
