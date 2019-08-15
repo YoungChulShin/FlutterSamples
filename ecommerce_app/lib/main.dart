@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             //Header
             UserAccountsDrawerHeader(
-              accountName: Text('Youngchul Shin'), 
+              accountName: Text('Youngchul Shin1'), 
               accountEmail: Text('go1323@gmail.com'),
               currentAccountPicture: GestureDetector(
                 child: CircleAvatar(
@@ -144,7 +144,7 @@ class _HomePageState extends State<HomePage> {
           imageCarousel,
           new Padding(
             padding: EdgeInsets.all(8.0),
-            child: Text('Category'),
+            child: Text('Category1'),
           ),
           HorizontalList(),
           new Padding(
